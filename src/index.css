@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: rgba(201, 201, 201, 0.584);
+  justify-content: center;
+  align-items: center;
+}
+
+.task-list{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.task-item{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 30px 150px ;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
