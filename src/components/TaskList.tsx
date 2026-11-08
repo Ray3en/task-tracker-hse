@@ -3,9 +3,11 @@ import TaskItem from "./TaskItem"
 
 type TaskListProps = {
     tasks: Task[]
+    changeTask: (id: string) => void
+    removeTask: (id: string) => void
 }
-function TaskList({tasks}: TaskListProps) {
 
+function TaskList({ tasks, changeTask, removeTask }: TaskListProps) {
     return (
         <div className="task-list">
             {tasks.map((task) => (
@@ -14,6 +16,8 @@ function TaskList({tasks}: TaskListProps) {
                     id={task.id}
                     title={task.title}
                     done={task.done}
+                    removeTask={removeTask}
+                    changeTask={changeTask}
                 />
             ))}
         </div>
